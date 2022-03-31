@@ -1,0 +1,89 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:gold"></div>
+
+<script>
+
+var velocityX = 10;
+var velocityY = 10;
+var positionX = 0;
+var positionY = 0;
+var time = 30;
+var ball = document.getElementById('ball');
+var position_maxX = 500;
+var position_maxY = 500;
+
+// YOUR CODE 
+// ----------------
+
+ball.style.left = positionX + 'px';
+function moveBall(){
+    positionX = positionX + velocityX;
+    ball.style.left = positionX + 'px';
+    ball.style.top = positionY + 'px';
+    if (positionX + velocityX < position_maxX ) {
+        positionX = positionX + velocityX
+    }
+    if (positionX + velocityX > position_maxX || positionX + velocityX < 0 ){
+        velocityX = -velocityX
+    }
+    if (positionY + velocityY < position_maxY ) {
+        positionY = positionY + velocityY
+    }
+    if (positionY + velocityY >= position_maxY || positionY + velocityY < 0 ){
+        velocityY = - velocityY
+    }
+}
+setInterval(moveBall, time);
+</script>
+
+<div id="ball1" style="
+  z-index:5;
+  position:absolute;
+  left:150px;
+  top:150px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background: green"></div>
+
+<script>
+
+var velocityX1 = 15;
+var velocityY1 = 15;
+var positionX1 = 50;
+var positionY1 = 50;
+var time = 30;
+var ball1 = document.getElementById('ball1');
+var position_maxX1 = 500;
+var position_maxY1 = 500;
+
+// YOUR CODE 
+// ----------------
+
+ball1.style.left = positionX1 + 'px';
+function moveBall(){
+    positionX1 = positionX1 + velocityX;
+    ball1.style.left = positionX1 + 'px';
+    ball1.style.top = positionY1 + 'px';
+    if (positionX1 + velocityX1 < position_maxX1 ) {
+        positionX1 = positionX1 + velocityX1
+    }
+    if (positionX1 + velocityX1 > position_maxX1 || positionX1 + velocityX1 < 0 ){
+        velocityX1 = -velocityX1
+    }
+    if (positionY1 + velocityY1 < position_maxY1 ) {
+        positionY1 = positionY1 + velocityY1
+    }
+    if (positionY1 + velocityY1 >= position_maxY1 || positionY1 + velocityY1 < 0 ){
+        velocityY1 = - velocityY1
+    }
+}
+setInterval(moveBall, time);
+</script>
